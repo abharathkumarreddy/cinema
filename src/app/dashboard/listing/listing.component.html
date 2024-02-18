@@ -1,0 +1,4 @@
+<div class="movie-tiles">
+  <app-movie-tile *ngFor="let movie of moviesList" [id]="movie.id" [movieDetails]="movie" class="app-movie-tile" [ngClass]="{'active': movie.id === selectedMovieId}" (click)="onSelectingMovie(movie.id)">
+  </app-movie-tile>
+</div>

@@ -1,0 +1,8 @@
+<form [formGroup]="criteriaForm">
+  <div class="form-check form-check-inline" *ngFor="let criteria of criterias;">
+    <input class="form-check-input" type="radio" [id]="criteria" formControlName="criteria" [value]="criteria">
+    <label class="form-check-label" [for]="criteria">
+      {{ criteria | criteriaFormatter | titlecase }} Movies
+    </label>
+  </div>
+</form>

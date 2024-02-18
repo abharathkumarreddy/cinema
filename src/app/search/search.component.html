@@ -1,0 +1,37 @@
+<div class="container-fluid bg">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar border-bottom" data-bs-theme="dark">
+                <div class="container-fluid">
+                  <span class="navbar-brand mb-0 h1 text-warning">Cinema</span>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 pt-3">
+            <form [formGroup]='searchForm'>
+                <div class="form-group mb-3">
+                    <input type="text"
+                    placeholder="Select Date Range"
+                    class="form-control"
+                    formControlName="dateRange"
+                    bsDaterangepicker
+                    [bsConfig]="{ adaptivePosition: true, dateInputFormat: 'YYYY-MM-DD'}"
+                    >
+                </div>
+            </form>
+        </div>
+        <div class="col-9 pt-3">
+            <button type="button" class="btn btn-primary me-3">
+                Total Movies <span class="badge text-bg-secondary">{{moviesCount}}</span>
+            </button>
+            <button type="button" class="btn btn-primary me-3">
+                Pages <span class="badge text-bg-secondary">{{pageCount}}</span>
+            </button>
+            <button type="button" class="btn btn-success" (click)="getAllMoviesInfo()">Download</button>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,13 @@
+.movie-tile{
+  width: 290px;
+  height: 430px;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  margin: 0px 20px 20px 0px;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
